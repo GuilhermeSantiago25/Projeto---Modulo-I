@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  background: rgba(219, 209, 209, 0.418);
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+h1 {
+  color: rgb(43, 43, 22);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.fundoSite {
+  background-image: url("bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 0;
+}
+
+.cartaoQuim,
+.cartaoBio,
+.cartaoFis {
+  margin: 100px auto 0;
+  width: 400px;
+  height: 600px;
+}
+
+.cartao__interior--quim,
+.cartao__interior--bio,
+.cartao__interior--fis {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.cartao__interior--quim.is-flipped,
+.cartao__interior--bio.is-flipped,
+.cartao__interior--fis.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.cartao__face--quim,
+.cartao__face--bio,
+.cartao__face--fis {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cartao__face--frenteQuim {
+  background-color: rgb(252, 97, 31);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0.9;
+}
+.quimica_icone {
+  background-repeat: no-repeat;
+}
+
+.cartao__face--frenteQuim h2 {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  padding-bottom: 40%;
+}
+
+.cartao__face--costas {
+  transform: rotateY(180deg);
+}
+
+.cartao__conteudo {
+  width: 100%;
+  height: 100%;
+}
+
+.cartao__header {
+  position: relative;
+  padding: 0 0 20px;
+}
+
+.cartao__header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 0 0 50% 0;
+}
+
+.quimico_header {
+  width: 100%;
+  height: 100%;
+}
+
+.personagem_quim {
+  position: absolute;
+  top: 210px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.cartao__header h2 {
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cartao__body {
+  padding: 30px;
+}
+
+.cartao__body h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.cartao__body p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.cartao__face--frenteBio {
+  background-color: rgb(252, 187, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0.9;
+}
+
+.cartao__face--frenteBio h2 {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  padding-bottom: 40%;
+}
+
+.biologa_header {
+  width: 100%;
+  height: 100%;
+}
+
+.personagem_bio {
+  position: absolute;
+  top: 210px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.cartao__face--frenteFis {
+  background-color: rgb(134, 27, 71);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0.9;
+}
+
+.cartao__face--frenteFis h2 {
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  padding-bottom: 40%;
+}
+
+.fisico_header {
+  width: 100%;
+  height: 10em;
+}
+
+.personagem_fis {
+  position: absolute;
+  top: 210px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.btn {
+  font-family: montserrat, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  top: 160px;
+  left: 115px;
+}
+
+.btn_1 {
+  background-color: rgb(252, 97, 31);
+  color: white;
+  box-shadow: 0 5px 0 rgb(252, 68, 31);
+}
+.btn_1:hover {
+  background-color: rgba(252, 68, 31);
+  color: white;
+  box-shadow: 0 5px 0 rgb(252, 68, 31);
+}
+
+.btn_1:active {
+  position: relative;
+  top: 165px;
+  left: 115px;
+  box-shadow: none;
+}
+
+.btn_bio {
+  font-family: montserrat, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  top: 335px;
+  left: 148px;
+}
+
+.btn_bio1 {
+  background-color: rgb(252, 187, 1);
+  color: white;
+  box-shadow: 0 5px 0 rgb(189, 139, 3);
+}
+.btn_bio1:hover {
+  background-color: rgba(189, 139, 3);
+  color: white;
+  box-shadow: 0 5px 0 rgb(189, 139, 3);
+}
+
+.btn_bio1:active {
+  position: relative;
+  top: 340px;
+  left: 148px;
+  box-shadow: none;
+}
+
+.btn_fis {
+  font-family: montserrat, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  top: 160px;
+  left: 120px;
+}
+
+.btn_fis1 {
+  background-color: rgb(134, 27, 71);
+  color: white;
+  box-shadow: 0 5px 0 rgb(97, 19, 51);
+}
+.btn_fis1:hover {
+  background-color: rgba(97, 19, 51);
+  color: white;
+  box-shadow: 0 5px 0 rgb(97, 19, 51);
+}
+
+.btn_fis1:active {
+  position: relative;
+  top: 165px;
+  left: 120px;
+  box-shadow: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(219, 209, 209, 0.418);
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.copyright {
+  color: rgb(22, 22, 20);
+  font-size: 13px;
+  font-style: italic;
+}

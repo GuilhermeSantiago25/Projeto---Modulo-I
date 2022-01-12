@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  color: rgb(43, 43, 22);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.fundoSite {
+  background-image: url("bg_index.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.caixa_textoTopo {
+  width: 550px;
+  height: 600px;
+  margin: 0 65% 0;
+  padding-top: 120px;
+}
+
+h2 {
+  color: rgb(43, 43, 22);
+  font-weight: bolder;
+  font-size: 40px;
+  text-align: right;
+  padding-top: 20px;
+}
+
+p {
+  color: rgb(36, 4, 0);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 120px;
+}
+
+.btn {
+  font-family: montserrat, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 12px;
+  padding-right: 45px;
+  padding-left: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  top: -200px;
+  left: 1550px;
+  right: 0;
+  bottom: 0;
+}
+
+.btn_1 {
+  background-color: rgba(94, 2, 94, 0.76);
+  color: white;
+  box-shadow: 0 5px 0 rgb(58, 0, 58);
+}
+.btn_1:hover {
+  background-color: rgba(58, 0, 58);
+  color: white;
+  box-shadow: 0 5px 0 rgb(44, 0, 44);
+}
+
+.btn_1:active {
+  position: relative;
+  top: -195px;
+  left: 1550px;
+  right: 0;
+  bottom: 0;
+  box-shadow: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(219, 209, 209, 0.418);
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.copyright {
+  color: rgb(22, 22, 20);
+  font-size: 13px;
+  font-style: italic;
+}
